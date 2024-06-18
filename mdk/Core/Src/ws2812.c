@@ -32,6 +32,7 @@ void WS2812_Rainbow(uint8_t speed)
 		buf_index = (buf_index == 256 * 3 - 1) ? 0 : buf_index+1;
 		WS2812_Set_All(rainbow_buf[buf_index]);
 		WS2812_Update();
+		//延时
 		uint8_t delay_time = 100 - ((speed<100) ? speed : 99);
 		HAL_Delay(delay_time);
 	}
@@ -52,7 +53,7 @@ void WS2812_RunningHorse(uint8_t speed,uint8_t color_offset)
 	{
 		//数组索引指针:保证指针不越界
 		buf_index = (buf_index == 256 * 3 - 1) ? 0 : buf_index+1;
-		
+		//生成并写入单个灯珠数据
 		for(uint8_t index = 0; index < WS2812_NUM; index++)
 		{
 			//设置像素点之间的位置偏移量
@@ -62,6 +63,7 @@ void WS2812_RunningHorse(uint8_t speed,uint8_t color_offset)
 			WS2812_Write_Data(rainbow_buf[rainbow_buf_index],index);
 		}
 		WS2812_Update();
+		//延时
 		uint8_t delay_time = 100 - ((speed<100) ? speed : 99);
 		HAL_Delay(delay_time);
 	}
