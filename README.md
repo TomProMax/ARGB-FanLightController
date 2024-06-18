@@ -1,5 +1,5 @@
 <!--
- * @Description: 
+ * @Description: en
  * @Author: Tomood
  * @Date: 2024-06-17 23:59:19
  * @LastEditors: Tomood
@@ -8,6 +8,7 @@
  * Copyright (c) 2024 by Tomood, All Rights Reserved. 
 -->
 # ARGB-FanLightController
+立创开源硬件平台: [Oshwhub-ARGB-FanLightController](https://oshwhub.com/tompromax/argb-light-controller)
 ## Introduction
 An ARGB-Fan's Light Controller based on STM32F030 with python host
 
